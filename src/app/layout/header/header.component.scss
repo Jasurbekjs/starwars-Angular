@@ -1,0 +1,37 @@
+.ma-0{
+  margin: 0px;
+}
+.px-2{
+  padding: 0px 16px;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 64px;
+  background-color: var(--tui-info-bg-hover);
+
+  &__logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__item{
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 4px 8px;
+      background-color: var(--tui-base-02);
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  .active{
+    color: var(--tui-base-02);
+    background-color: var(--tui-positive-hover);
+  }
+}

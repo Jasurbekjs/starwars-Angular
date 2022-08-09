@@ -1,0 +1,46 @@
+<div class="tui-row tui-row_adaptive ma-0">
+  <div class="tui-col_xs-12 tui-col_md-12 tui-col_lg-12 header">
+    <div class="header__logo">
+      <div
+        style="cursor: pointer;"
+        (click)="routePage('/')"
+      >
+        <img 
+          src="assets/img/logo.png" 
+          alt="Logo"
+          width="100"  
+        >
+      </div>
+      <div 
+        *ngFor="let item of pages" 
+        class="px-2 header__menu" 
+      >
+        <div class="header__menu__item tui-text_body-l-2"
+          [class.active]="currentRoute == item.link"
+          (click)="routePage(item.link)"
+        >
+          <strong>{{ item.name+'.TEXT' | translate }}</strong>
+        </div>
+        
+      </div>
+    </div>
+    <div>
+      <form class="b-form">
+        <tui-select
+            tuiTextfieldSize="s"
+            [formControl]="langValue"
+        >
+            {{'HOME.LANGUAGE' | translate}}
+            <input
+                tuiTextfield
+            />
+            <tui-data-list-wrapper
+                *tuiDataList
+                [items]="langs"
+            ></tui-data-list-wrapper>
+        </tui-select>
+    </form>
+      
+    </div>
+  </div>
+</div>

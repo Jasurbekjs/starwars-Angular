@@ -1,0 +1,41 @@
+.actions{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.item{
+  margin-top: 12px;
+}
+.items{
+  padding: 0px;
+  margin: 0px;
+  max-height: calc(100vh - 180px);
+}
+
+.characters{
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.button{
+  cursor: pointer;
+  padding: 4px 12px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  &__edit{
+    background-color: var(--tui-positive-hover);
+    border: 1px solid var(--tui-positive);
+  }
+  &__delete{
+    background-color: var(--tui-negative-hover);
+    border: 1px solid var(--tui-negative);
+  }
+}
+
+.mx-2{
+  margin-left: 8px;
+  margin-right: 8px;
+}

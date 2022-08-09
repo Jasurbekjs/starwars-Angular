@@ -1,0 +1,44 @@
+{
+  "HOME":{
+    "TEXT": "Star Wars",
+    "LANGUAGE": "Language",
+    "ADD": "Add",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "KM": "km",
+    "SM": "sm",
+    "YEARS": "years",
+    "CANCEL": "Cancel",
+    "SAVE": "Save",
+    "NAME": "Name"
+  },
+  "CHARACTERS":{
+    "TEXT": "Characters",
+    "CHARACTER": "Character",
+    "GENDER": "Gender",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "MIDDLE_NAME": "Middle Name",
+    "BIRTHDATE": "Birth Date",
+    "HEIGHT": "Height"
+  },
+  "FILMS":{
+    "TEXT": "Films",
+    "NAME": "Name",
+    "FILM": "Film",
+    "DATE": "Movie release date",
+    "BUDGET": "Budget",
+    "LINK": "Link to view"
+  },
+  "PLANETS":{
+    "TEXT": "Planets",
+    "PLANET": "Planet",
+    "DIAMETER": "Diameter"
+  },
+  "RACES":{
+    "TEXT":"Races",
+    "RACE":"Race",
+    "HEIGHT_AVERAGE": "Height average",
+    "LIFE_AVERAGE": "Life average"
+  }
+}

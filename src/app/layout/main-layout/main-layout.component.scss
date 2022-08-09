@@ -1,0 +1,11 @@
+.starwars{
+  background-image: url('/assets/img/background.webp');
+}
+.starwars-container{
+  background-color: var(--tui-base-02);
+  min-height: 100vh;
+  position: relative;
+}
+.content{
+  padding: 16px;
+}

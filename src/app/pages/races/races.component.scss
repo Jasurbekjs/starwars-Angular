@@ -1,0 +1,17 @@
+.races{
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.item{
+  margin-top: 12px;
+}
+.items{
+  padding: 0px;
+  margin: 0px;
+  max-height: calc(100vh - 180px);
+}
+

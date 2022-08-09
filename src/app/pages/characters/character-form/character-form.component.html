@@ -1,0 +1,151 @@
+<div class="characters">
+  <div class="characters__text tui-text_h3">
+    <div class="characters__header">
+      <div>
+        <strong>
+          {{'HOME.'+pageType | translate}}
+          {{'CHARACTERS.CHARACTER' | translate}}
+          <span *ngIf="pageType=='EDIT'">
+            {{currentID}}
+          </span>
+        </strong>
+      </div>
+      <div>
+        
+      </div>
+    </div>
+    <tui-scrollbar>
+      <div class="tui-row tui-row_adaptive items">
+        <div class="tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+          <tui-loader
+            class="inline-flex tui-space_right-2"
+            [showLoader]="loading"
+            [inheritColor]="true"
+            [overlay]="true"
+          >
+          </tui-loader>
+          <form [formGroup]="character">
+            <tui-input formControlName="first_name" class="item">
+              {{'CHARACTERS.FIRST_NAME' | translate}}
+              <input
+                  tuiTextfield
+              />
+            </tui-input>
+
+            <tui-input formControlName="last_name" class="item">
+              {{'CHARACTERS.LAST_NAME' | translate}}
+              <input
+                  tuiTextfield
+              />
+            </tui-input>
+
+            <tui-input formControlName="middle_name" class="item">
+              {{'CHARACTERS.MIDDLE_NAME' | translate}}
+              <input
+                  tuiTextfield
+              />
+            </tui-input>
+
+            <tui-input formControlName="birth_date" class="item">
+              {{'CHARACTERS.BIRTHDATE' | translate}}
+              <input
+                  tuiTextfield
+              />
+            </tui-input>
+
+            <tui-input formControlName="gender" class="item">
+              {{'CHARACTERS.GENDER' | translate}}
+              <input
+                  tuiTextfield
+              />
+            </tui-input>
+
+            <tui-input formControlName="height" class="item">
+              {{'CHARACTERS.HEIGHT' | translate}}
+              <input
+                  tuiTextfield
+              />
+            </tui-input>
+
+            <tui-select
+              class="item"
+              tuiTextfieldSize="s"
+              formControlName="planet_id"
+            >
+              {{'PLANETS.PLANET' | translate}}
+              <input
+                  tuiTextfield
+              />
+              <tui-data-list-wrapper
+                  *tuiDataList
+                  [items]="planets"
+                  [itemContent]="content"
+              ></tui-data-list-wrapper>
+            </tui-select>
+            <tui-select
+              class="item"
+              tuiTextfieldSize="s"
+              formControlName="race_id"
+            >
+              {{'RACES.RACE' | translate}}
+              <input
+                  tuiTextfield
+              />
+              <tui-data-list-wrapper
+                  *tuiDataList
+                  [items]="races"
+                  [itemContent]="content"
+              ></tui-data-list-wrapper>
+            </tui-select>
+            <tui-select
+              class="item"
+              tuiTextfieldSize="s"
+              formControlName="films_id"
+            >
+              {{'FILMS.FILM' | translate}}
+              <input
+                  tuiTextfield
+              />
+              <tui-data-list-wrapper
+                  *tuiDataList
+                  [items]="films"
+                  [itemContent]="content"
+              ></tui-data-list-wrapper>
+            </tui-select>
+          </form>
+
+          <div class="characters__actions">
+            <button
+                tuiButton
+                type="button"
+                appearance="accent"
+                class="tui-space_right-3 tui-space_bottom-3 ma-0"
+                (click)="cancel()"
+            >
+              {{'HOME.CANCEL' | translate}}
+            </button>
+            <button
+                tuiButton
+                type="button"
+                appearance="primary"
+                class="tui-space_right-3 tui-space_bottom-3 ma-0"
+                (click)="save()"
+            >
+              {{'HOME.SAVE' | translate}}
+            </button>
+          </div>
+
+          <ng-template
+              #content
+              let-item
+          >
+              {{item? item.name : ''}}
+          </ng-template>
+          
+  
+        </div>
+      </div>
+    </tui-scrollbar>
+    
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="races">
+  <div class="races__text tui-text_h3">
+    <div class="races__header">
+      <div>
+        <strong>{{'RACES.TEXT' | translate}}</strong>
+      </div>
+      <div>
+        <button
+            tuiButton
+            type="button"
+            appearance="secondary"
+            class="tui-space_right-3 tui-space_bottom-3"
+            (click)="router.navigate(['/races', 0])"
+        >
+            {{'HOME.ADD' | translate}}
+        </button>
+      </div>
+    </div>
+    <tui-scrollbar>
+      <div class="tui-row tui-row_adaptive items">
+        <div class="tui-col_xs-12 tui-col_md-12 tui-col_lg-12">
+          <tui-loader
+            class="inline-flex tui-space_right-2"
+            [showLoader]="loading"
+            [inheritColor]="true"
+            [overlay]="true"
+          >
+          </tui-loader>
+          <tui-island *ngFor="let item of items" class="item">
+            <h3 class="tui-island__title">{{item.name}}</h3>
+            <div class="tui-island__paragraph"> 
+              {{'RACES.HEIGHT_AVERAGE' | translate}}: <strong>{{item.height_average}} {{'HOME.SM' | translate}}</strong> 
+            </div>
+            <div class="tui-island__paragraph"> 
+              {{'RACES.LIFE_AVERAGE' | translate}}: <strong>{{item.life_average}} {{'HOME.YEARS' | translate}}</strong> 
+            </div>
+          </tui-island>
+        </div>
+      </div>
+    </tui-scrollbar>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.characters{
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__actions{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.items{
+  padding: 0px;
+  margin: 0px;
+  max-height: calc(100vh - 180px);
+}
+.item{
+  margin-top: 12px;
+}
+.ma-0{
+  margin: 0px;
+}
